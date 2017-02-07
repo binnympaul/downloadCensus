@@ -46,7 +46,8 @@ getCensusData <- function(name, vintage, key, vars, region, regionin){
   colnames(temp_data) <- temp_data[1,]
   temp_data <- temp_data[-1,]
   temp_data <- apply(temp_data, 2, function(x) as.numeric(x))
-  
+  temp_data <- as.data.frame(temp_data)
+    
   return(temp_data)
   
 }
